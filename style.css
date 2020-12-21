@@ -1,0 +1,521 @@
+* {
+  box-sizing: border-box;
+  margin: 0rem;
+  /* border: 0.0625rem solid red; */
+}
+
+:root {
+  --main-text-font: "Montserrat", Helvetica, sans-serif;
+}
+
+@keyframes show-up {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slide2-2-translate {
+  from {
+    left: 8%;
+    opacity: 0;
+  }
+  to {
+    left: calc(8% + 9.2rem);
+    opacity: 1;
+  }
+}
+
+@keyframes slide2-4-translate {
+  from {
+    left: 80%;
+    opacity: 0;
+  }
+  to {
+    left: calc(80% - 6rem);
+    opacity: 1;
+  }
+}
+
+.body {
+  font-size: 0.625rem;
+  font-family: var(--main-text-font);
+  padding: 0;
+  background-color: #fafafa;
+  width: 69.75rem;
+}
+
+/* I have set margin to 0 why it's still inherit the "user agent stylesheet" with 0.5rem margin? */
+
+.main-wrapper {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  width: 100%;
+}
+
+h1 {
+  font-size: 6rem;
+  text-align: center;
+  font-family: var(--main-text-font);
+  line-height: 1em;
+  font-weight: 600;
+  max-width: 53.125rem;
+}
+
+h2 {
+  font-size: 2.8125rem;
+  line-height: 1.4em;
+  font-family: var(--main-text-font);
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-family: var(--main-text-font);
+  font-weight: 600;
+}
+
+h4 {
+  font-size: 1.17em;
+  font-family: var(--main-text-font);
+  line-height: 2.125rem;
+  font-weight: 600;
+}
+
+h5 {
+  font-size: 1.25rem;
+  font-family: var(--main-text-font);
+  margin: 0;
+  font-weight: lighter;
+  line-height: 1.6em;
+  letter-spacing: 0.01em;
+  text-align: center;
+}
+
+p {
+  font-size: 1rem;
+  font-family: var(--main-text-font);
+  line-height: 1.6em;
+}
+
+button {
+  outline: none;
+}
+
+a {
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.nav-container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  background-color: #ffffff;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border-bottom: #dedede solid 0.0625rem;
+}
+
+.nav-container a:link,
+.nav-container a:visited {
+  color: black;
+  text-decoration: none;
+}
+
+.nav-left {
+  width: 75%;
+  height: 4.3125rem;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+.nav-left-margin {
+  margin: 0 0.625rem;
+}
+
+.logo {
+  margin: 0 0.625rem 0 1.25rem;
+}
+
+.nav-left a,
+.nav-container button {
+  transition-duration: 0.5s;
+  padding: 0.5rem;
+  line-height: 3rem;
+  font-family: var(--main-text-font);
+  font-weight: lighter;
+  font-size: 0.9375rem;
+}
+
+.nav-left a:hover,
+.dropdown-content a:hover,
+.nav-left .dropdownbtn:hover {
+  color: rgb(17, 109, 255);
+}
+
+.nav-right {
+  width: 25%;
+  height: 4.3125rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+}
+
+.nav-right > button {
+  border: rgb(17, 109, 255) solid 0.0625rem;
+  color: rgb(17, 109, 255);
+  cursor: pointer;
+  width: 8rem;
+  height: 2.5rem;
+  text-decoration: none;
+  border-radius: 1.25rem;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  font-weight: 500;
+}
+
+.nav-right > button:hover {
+  transition: border-color 0.4s ease 0s, background-color 0.4s ease 0s;
+  color: white;
+  background-color: rgb(17, 109, 255);
+}
+
+.nav-right span {
+  margin: 0;
+  padding: 0;
+  font-weight: 500;
+}
+
+.logo {
+  height: 1.75rem;
+  width: 4.5rem;
+}
+
+.dropdownbtn {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  background-color: white;
+  position: absolute;
+  top: 4rem;
+  transition: all 0.5s ease;
+}
+
+.dropdown-content a {
+  display: block;
+  line-height: 1.9375rem;
+  font-weight: lighter;
+  font-family: var(--main-text-font);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  white-space: nowrap;
+}
+
+.dropdown:hover {
+  position: relative;
+  display: inline-block;
+  /* slefnote: these enable dropdown menu not disappear quickly */
+}
+
+.dropdownbtn.language {
+  display: flex;
+  align-items: center;
+  font-weight: 300;
+  font-size: 0.875rem;
+  letter-spacing: 0.15em;
+  margin: 0 1.25rem 0 0;
+}
+
+.nav-right a {
+  padding: 0.5rem;
+}
+
+.slide1 {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 26.875rem;
+  padding: 1.875rem 0 2.8125rem 0;
+  background-color: #fafafa;
+  width: 100%;
+  height: 30.4375rem;
+}
+
+.slide1 h5 {
+  text-align: center;
+  font-weight: 400;
+  letter-spacing: 0;
+  width: 42.5rem;
+}
+.slide1 button {
+  border: 0.0625rem solid rgb(17, 109, 255);
+  background-color: rgb(17, 109, 255);
+  border-radius: 1.875rem;
+  font-family: var(--main-text-font);
+  width: 12.125rem;
+  height: 3.5rem;
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin-top: 0.625rem;
+}
+
+/* slefnote:  why font-weight is not working for the child span . 
+- answer: if the font-family is missing then the font-weight will not working. m*/
+
+.slide2 {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+  background-color: #fafafa;
+}
+
+.slide2-1 {
+  z-index: 2;
+  margin-top: 3.125rem;
+  margin-left: -3.5rem;
+  display: inline-block;
+  animation: show-up ease-in-out 2s;
+}
+
+.slide2-2 {
+  position: absolute;
+  z-index: 2;
+  top: 5.6rem;
+  left: 15.5rem;
+  display: inline-block;
+  animation: slide2-2-translate ease-in-out 2s;
+}
+
+.slide2-3 {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 10%;
+}
+
+.slide2-4 {
+  position: absolute;
+  z-index: 2;
+  top: 3.125rem;
+  left: 57.2rem;
+  display: inline-block;
+  animation: slide2-4-translate ease-in-out 2s;
+}
+
+.slide2-5 {
+  position: absolute;
+  z-index: 2;
+  top: 1.68rem;
+  left: 65.3rem;
+  display: inline-block;
+  overflow: hidden;
+  animation: show-up ease-in-out 2s;
+}
+
+.blue-card {
+  background-color: #14348e;
+  display: flex;
+  color: white;
+  padding-top: 14.375rem;
+  padding-bottom: 6.8125rem;
+  margin-top: 8.1rem;
+}
+
+.blue-card h2,
+.blue-card h3,
+.blue-card h5 {
+  text-align: left;
+}
+
+.blue-card h3 {
+  margin-top: 2.5rem;
+  border-bottom-width: 0.125rem;
+  border-bottom-style: solid;
+  padding: 0 0 0.125rem 0;
+}
+
+.blue-card .left-hand {
+  padding-bottom: 5.625rem;
+  padding-left: 2.5rem;
+}
+
+.blue-card .right-hand {
+  padding-right: 1.875rem;
+  padding-left: 2.5rem;
+}
+
+.blue-card a,
+.green-card a {
+  align-items: baseline;
+  display: flex;
+  text-decoration: none;
+}
+
+.left-hand {
+  width: 50%;
+}
+
+.right-hand {
+  width: 50%;
+}
+
+.arrow {
+  height: 100%;
+  width: 1.375rem;
+  margin-left: 0.625rem;
+}
+
+.green-card {
+  display: flex;
+  color: white;
+}
+
+.green-card .left-hand {
+  background-color: #035946;
+  padding: 6.25rem 0 8.125rem 0;
+  width: 52%;
+}
+
+.green-card-container {
+  display: flex;
+  padding: 4.6875rem 3.4375rem 0 3.4375rem;
+}
+.green-card .row1 {
+  margin-right: 0.9375rem;
+  width: 44%;
+}
+
+.green-card .row2 {
+  margin-right: 0.9375rem;
+  width: 56%;
+}
+
+.green-card h2 {
+  padding: 0 8.125rem 0 3.4375rem;
+  line-height: 1.2em;
+}
+
+.green-card h3 {
+  margin-left: 3.4375rem;
+  margin-top: -1.25rem;
+  border-bottom-width: 0.125rem;
+  border-bottom-style: solid;
+  padding: 0 0 0.125rem 0;
+}
+
+.green-card h4 {
+  padding: 0.625rem 0 0.3125rem 0;
+}
+
+.green-card h5 {
+  text-align: left;
+  padding-left: 3.4375rem;
+}
+
+.green-card p {
+  font-weight: lighter;
+  font-size: 0.9375rem;
+}
+
+.green1,
+.green2,
+.green3,
+.green4 {
+  padding: 0.625rem 0 4.375rem 0;
+  border-top: solid 0.0625rem white;
+  height: 50%;
+}
+
+.green-card .right-hand {
+  background: linear-gradient(180deg, #f5f5f5 50%, #eeeeee 50%);
+  display: flex;
+  padding-top: 5rem;
+  padding-left: 2.6875rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.white-card {
+  display: flex;
+  align-items: center;
+  padding: 8.75rem 0 8.75rem 0;
+}
+
+.white-card .left-hand {
+  display: flex;
+  justify-content: center;
+}
+
+.white-card .right-hand {
+  display: flex;
+  flex-flow: column;
+  color: black;
+}
+
+.white-btn:hover h3 {
+  border-bottom-width: 0.125rem;
+  border-bottom-style: solid;
+}
+
+.white-card h3 {
+  border-bottom-width: 0.125rem;
+  border-bottom-style: solid;
+  padding: 0 0 0.125rem 0;
+}
+
+.white-card a {
+  display: flex;
+  text-decoration: none;
+}
+
+.white-card h5 {
+  padding: 3.5rem 5.625rem 2.5rem 0;
+  text-align: start;
+  font-weight: 400;
+  letter-spacing: normal;
+}
+
+.main-btn:hover {
+  background-color: rgb(79, 123, 251);
+}
+
+.blue-btn:hover {
+  color: rgb(220, 224, 237);
+}
+
+.green-btn:hover {
+  color: rgb(221, 229, 226);
+}
+.white-btn:hover,
+.dropdownbtn.language:hover {
+  /* slefnote:  color: rgb(64, 109, 251); changing color for svg needs the "filter" attribute, instead of "color" */
+  filter: invert(34%) sepia(84%) saturate(1714%) hue-rotate(214deg)
+    brightness(97%) contrast(102%);
+}
