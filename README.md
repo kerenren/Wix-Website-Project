@@ -3,6 +3,8 @@ One of my first projects from Israel Tech Challenge Full Stack Web Development B
 
 I was assigned and developed the pixel perfect website page almost as the same as the home page of the official Wix Website by using HTML and CSS without any libraries or frameworks.
 
+## Assignment requirements
+
 - Recreate the Wix website using HTML & CSS by inspecting their website with [chrome devtools](https://developers.google.com/web/tools/chrome-devtools)
 
 - For your convenience, we provide you [a link to an archived version](http://web.archive.org/web/20200201073946/https://www.wix.com/) of the Wix website
