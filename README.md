@@ -1,5 +1,7 @@
 # Wix-Website-Project
-One of the first projects from Israel Tech Challenge Bootcamp. I was assigned and developed almost the pixel perfect website page as the home page of the official Wix Website using HTML and CSS without any libraries or frameworks. 
+One of my first projects from Israel Tech Challenge Full Stack Web Development Bootcamp. It's completed within 24 hours.
+
+I was assigned and developed the pixel perfect website page almost as the same as the home page of the official Wix Website by using HTML and CSS without any libraries or frameworks.
 
 - Recreate the Wix website using HTML & CSS by inspecting their website with [chrome devtools](https://developers.google.com/web/tools/chrome-devtools)
 
