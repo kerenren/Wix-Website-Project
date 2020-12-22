@@ -1,7 +1,6 @@
 * {
   box-sizing: border-box;
   margin: 0rem;
-  /* border: 0.0625rem solid red; */
 }
 
 :root {
@@ -46,8 +45,6 @@
   background-color: #fafafa;
   width: 69.75rem;
 }
-
-/* I have set margin to 0 why it's still inherit the "user agent stylesheet" with 0.5rem margin? */
 
 .main-wrapper {
   display: flex;
@@ -285,9 +282,6 @@ img {
   margin-top: 0.625rem;
 }
 
-/* slefnote:  why font-weight is not working for the child span . 
-- answer: if the font-family is missing then the font-weight will not working. m*/
-
 .slide2 {
   width: 100%;
   display: flex;
@@ -513,6 +507,7 @@ img {
 .green-btn:hover {
   color: rgb(221, 229, 226);
 }
+
 .white-btn:hover,
 .dropdownbtn.language:hover {
   /* slefnote:  color: rgb(64, 109, 251); changing color for svg needs the "filter" attribute, instead of "color" */
